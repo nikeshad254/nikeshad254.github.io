@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montez&family=Montserrat+Alternates:wght@400;500;700;900&family=Montserrat:wght@100;500;700&display=swap');
 
+@import url(animation.css);
+
 :root {
     --purple-500: #845EC2;
     --blue-500: #2C73D2;
     --blue-100: #11002e;
     --blue-dark-200: #0081CF;
     --text-dark: #0d0245;
+    --green-100: #27DBC3;
     --green-300: #008F7A;
     --white-color: #FBEAFF;
     --nav-bg: #5E28A7;
+
 }
 
 * {
@@ -26,6 +30,7 @@
 
 .wrapper{
     max-width: 1300px;
+    margin: 0 auto;
 }
 
 /* utility class ends */
@@ -34,6 +39,7 @@ body{
     background: var(--blue-100);
     min-height: 100vh;
     color: var(--white-color);
+    overflow-x: hidden;
 }
 
 /* navigation  */
@@ -45,6 +51,7 @@ body{
     margin: 0 auto;
     display: flex;
     flex: 1 100%;
+    height: 8vh;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
@@ -72,4 +79,104 @@ body{
 .navigation ul li a:hover{
     background: #7030c5;
     border-radius: 0.5rem;
+}
+
+/* main home section starts */
+
+.home{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+}
+
+.home .home-background{
+    position: absolute;
+    height: 90vh;
+    width: 100vw;
+    /* height: 92vh; */
+}
+.home .left-side{
+    display: flex;
+    flex: 1 1 100%;
+    height: 92vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+
+.home .left-side h3{
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.home .left-side h3 span{
+    color: var(--green-100);
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Montez', cursive;
+}
+
+.home .left-side p{
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.home .right-side{
+    /* border: 1px solid rgb(0, 132, 255); */
+    flex: 1 1 100%;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .right-side .image{
+    position: relative;
+    transition: 1s ease;
+}
+.home .right-side .image.active{
+    transform: rotateX(180deg) rotateY(180deg);
+}
+
+.home .right-side .image img{
+    border: 1px solid white;
+    height: 15rem;
+    width: 25rem;
+    border-radius: 1rem;
+    transform: rotateZ(-10deg);
+    position: relative;
+}
+
+.home .right-side .image::before{
+    content: "";
+    position: absolute;
+    top: -3.5rem;
+    right: -0.5rem;
+    border-top: 0.7rem solid var(--green-100);
+    border-right: 0.7rem solid var(--green-100);
+    border-radius: 0.5rem;
+    /* background: red; */
+    height: 100px;
+    width: 100px;
+    transition: 1s ease-in-out;
+    transform: rotateZ(-10deg);
+}
+
+.home .right-side .image::after{
+    content: "";
+    position: absolute;
+    bottom: -3.5rem;
+    left: -0.5rem;
+    border-bottom: 0.7rem solid var(--green-100);
+    border-left: 0.7rem solid var(--green-100);
+    border-radius: 0.5rem;
+    /* background: red; */
+    height: 100px;
+    width: 100px;
+    transform: rotateZ(-10deg);
+    transition: 1s ease-in-out;
 }
