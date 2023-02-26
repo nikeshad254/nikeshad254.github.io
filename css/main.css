@@ -290,7 +290,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 0.7rem;
-    background-color: #008F7A;
+    background: linear-gradient(0deg, #5E28A7, #A76DE5);
     border-radius: 2rem;
     padding: 0.2rem;
     padding-right: 0.7rem;
@@ -303,12 +303,12 @@ body{
 .containerStack:hover{
     transform: translateY(-0.3rem);
     transition: 0.5s ease-in-out;
-    background: #038161;
+    background: linear-gradient(45deg, #5E28A7, #A76DE5);
 }
 .containerStack img{
     height: 2rem;
     width: 2rem;
-    border: 0.2rem solid #008F7A;
+    border: 1px solid #008F7A;
     border-radius: 50%;
 }
 
@@ -319,7 +319,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background: #002618;
+    /* background: #002618; */
+    background: linear-gradient(180deg, #002618, #00543A);
     border-radius: 0.5rem;
 }
 
@@ -331,7 +332,7 @@ body{
     justify-content: center;
     align-items: center;
     /* flex-wrap: wrap; */
-    background: #002618;
+    background: linear-gradient(180deg, #002618, #00543A);
     border-radius: 0.5rem;
     padding: 2rem 0rem;
 }
@@ -458,8 +459,8 @@ body{
 .contact{
     /* display: flex; */
     height: 100vh;
-    border: 1px solid white;
     padding-top: 8vh;
+    padding-bottom: 0.5rem;
 }
 
 .contact .contents{
@@ -468,11 +469,73 @@ body{
 }
 
 .contact .inputForm{
-    flex: 1 1 50%;
+    flex: 1 1 40%;
     border: 1px solid white;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 0.7rem;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 1rem;
+    height: fit-content;
+}
+.contact .inputForm input{
+    border-radius: 0.5rem;
+    height: 2rem;
+    transition: 0.3s ease-in;
+    padding-left: 1rem;
+}
+
+.contact .inputForm input[type="submit"]{
+    margin-top: 1rem;
+}
+
+.contact .inputForm input[type="submit"]:hover{
+    background-color: #11002e;
+    color: #FBEAFF;
+    outline: 1px solid #FBEAFF;
+    transition: 0.3s ease-in;
+}
+
+
+.contact .inputForm textarea{
+    border-radius: 0.5rem;
+    height: 8rem;
+    resize: none;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
 }
 
 .contact .footer{
     flex: 1 1 50%;
-    border: 1px solid blue;
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .footer .main-box{
+    border: 1px solid #FBEAFF;
+    border-radius: 0.7rem;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.contact .footer .main-box .made-text span{
+    font-weight: bold;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-transform: uppercase;
+    /* font-family: 'Montez', cursive; */
+}
+
+.contact .footer .main-box .follow a{
+    text-decoration: none;
+    margin-right: 1rem;
 }
