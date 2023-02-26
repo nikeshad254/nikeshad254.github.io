@@ -1,19 +1,17 @@
 // home image changing handeler
-
-let homeImg = document.querySelector("#homeImg");
-
 const homeFlipImgs = [
     {
-        msg: "first message",
-        img: "../medias/homeImg1.png"
+      "msg": "first message",
+      "img": "../medias/homeImg1.png"
     },
-
+    
     {
-        msg: "second msg",
-        img: "../medias/homeImg2.png"
+      "msg": "second msg",
+      "img": "../medias/homeImg2.png"
     }
-
 ]
+
+let homeImg = document.querySelector("#homeImg");
 
 let i=0;
 let imgFilp = setInterval(() => {
