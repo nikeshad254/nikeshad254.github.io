@@ -138,7 +138,7 @@ const ResumeProtfolio = {
 
     projects: [
       {
-        title: "todo By Bootstrap",
+        title: "Todo By Bootstrap",
         desc: "todo app backend by js but front end made using bootstrap quite reponsive",
         thumbnail: "../medias/projectImg/todoBS.png",
         link: "http://bit.ly/3SzxGED",

@@ -559,3 +559,12 @@ body{
     text-decoration: none;
     margin-right: 1rem;
 }
+
+/* one static */
+.containerStack:nth-child(1){
+    background: #5E28A7;
+}
+.onePortfolio:nth-child(1){
+    background: #0d0245;
+
+}
