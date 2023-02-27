@@ -318,9 +318,9 @@ body{
 #containers{
     width: 30rem;
     height: 20rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 0.5rem;
-    flex-wrap: wrap;
     /* background: #002618; */
     background: linear-gradient(180deg, #002618, #00543A);
     border-radius: 0.5rem;
@@ -375,6 +375,14 @@ body{
     padding-top: 8vh;
     height: 100vh;
 }
+.portfolio small{
+    font-size: 0.6rem;
+}
+
+.portfolio small a{
+    font-size: inherit;
+    color: inherit;
+}
 
 .portfolio .project-display{
     margin-top: 3rem;
@@ -399,6 +407,7 @@ body{
     padding: 0.7rem 0rem;
     border-bottom: 1px solid #FBEAFF;
     margin-top: 0.5rem;
+    cursor: pointer;
 }
 
 .project-display .topics li:hover{
@@ -437,7 +446,15 @@ body{
 .project-display .projects .one-proj h2{
     font-size: 0.8rem;
     margin-top: 1rem;
+    /* margin-bottom: 1rem; */
+}
+
+.project-display .projects .one-proj p{
+    font-size: 0.7rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    line-height: 1rem;
+    text-align: justify;
 }
 
 .project-display .projects .one-proj a{
