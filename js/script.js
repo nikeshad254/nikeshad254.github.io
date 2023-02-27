@@ -1,17 +1,33 @@
 // home image changing handeler
 const homeFlipImgs = [
     {
-      "msg": "first message",
+      "msg": "my mission",
       "img": "../medias/homeImg1.png"
     },
     
     {
-      "msg": "second msg",
+      "msg": "my moto",
       "img": "../medias/homeImg2.png"
+    },
+
+    {
+      "msg": "my plans",
+      "img": "../medias/homeImg3.png"
+    },
+
+    {
+      "msg": "welcome",
+      "img": "../medias/homeImgLast.png"
     }
 ]
 
+
+
 let homeImg = document.querySelector("#homeImg");
+homeImg.innerHTML = `
+        <p class="message">${homeFlipImgs[homeFlipImgs.length-1]["msg"]}</p>
+        <img id="homeImg_image" src="${homeFlipImgs[homeFlipImgs.length-1]["img"]}" alt="">
+    `
 
 let i=0;
 let imgFilp = setInterval(() => {
