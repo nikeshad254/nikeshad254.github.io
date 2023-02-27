@@ -21,10 +21,14 @@
     box-sizing: border-box;
     font-size: 1.1rem;
     font-family: 'Montserrat', sans-serif;
+    border: 1px solid red;
     /* font-family: 'Montserrat Alternates', sans-serif; */
     /* font-family: 'Montez', cursive; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 /* utility class starts */
 
@@ -46,7 +50,7 @@
 body{
     background: var(--blue-100);
     min-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     color: var(--white-color);
     overflow-x: hidden;
 }
@@ -56,12 +60,15 @@ body{
     background: var(--nav-bg);
     position: fixed;
     width: 100vw;
+    /* right: 0;
+    left: 0; */
     z-index: 100;
 }
 .navigation{
     /* border: 1px solid white; */
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     flex: 1 100%;
     height: 8vh;
     justify-content: space-between;
@@ -79,6 +86,7 @@ body{
 
 .navigation ul{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     list-style: none;
     padding: 0.2rem;
@@ -107,7 +115,7 @@ body{
 .home .home-background{
     position: absolute;
     height: 90vh;
-    width: 100vw;
+    max-width: 100vw;
     /* height: 92vh; */
 }
 .home .left-side{
@@ -182,8 +190,8 @@ body{
     border-right: 0.7rem solid var(--green-100);
     border-radius: 0.5rem;
     /* background: red; */
-    height: 100px;
-    width: 100px;
+    height: 5rem;
+    width: 5rem;
     transition: 1s ease-in-out;
     transform: rotateZ(-10deg);
 }
@@ -197,8 +205,8 @@ body{
     border-left: 0.7rem solid var(--green-100);
     border-radius: 0.5rem;
     /* background: red; */
-    height: 100px;
-    width: 100px;
+    height: 5rem;
+    width: 5rem;
     transform: rotateZ(-10deg);
     transition: 1s ease-in-out;
 }
@@ -234,6 +242,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+    /* overflow-x: hidden; */
 }
 .about .right-side .myPicImg{
     height: 15rem;
@@ -245,18 +254,18 @@ body{
 }
 .about .right-side .blob1{
     position: absolute;
-    top: -4rem;
-    right: -7rem;
-    height: 20rem;
-    width: 20rem;
+    top: 5vh;
+    right: 0rem;
+    height: 12rem;
+    width: 12rem;
     
 }
 .about .right-side .blob2{
     position: absolute;
-    bottom: -8rem;
-    left: -6rem;
-    height: 20rem;
-    width: 20rem;
+    bottom: 5vh;
+    left: 0rem;
+    height: 12rem;
+    width: 12rem;
 }
 
 
@@ -278,11 +287,12 @@ body{
 }
 
 .resume .right-side{
-    padding: 1rem;
+    padding: 0rem 1rem;
     flex: 1 1 100%;
 }
 
 .resume .left-side{
+    padding: 0rem 1rem;
     flex: 1 1 100%;
 }
 
@@ -328,8 +338,8 @@ body{
 
 /* mistakely exchanges left and right here */
 .resume .content .left-side .container {
-    width: 30rem;
-    /* height: 20rem; */
+    width: 90%;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -341,8 +351,8 @@ body{
 }
 
 .resume .content .left-side .container img{
-    width: 25rem;
-    height: 15rem;
+    width: 19.23rem;
+    height: 11.54rem;
     border: 2px solid white;
     border-radius: 0.5rem;
 }
@@ -532,7 +542,7 @@ body{
     display: flex;
     height: 75vh;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .contact .footer .main-box{
@@ -560,7 +570,123 @@ body{
     margin-right: 1rem;
 }
 
-/* one static */
+
+/* media queries */
+@media screen and (min-width: 1400px) {
+    .home, .about, .resume, .contact{
+        height: 60vh;
+        width: 100vw;
+        /* border: 1px solid red; */
+    }
+
+    .home .home-background,
+    .home .left-side,
+    .home .right-side{
+        height: 60vh;
+    }
+
+    .portfolio{
+        margin-top: 4rem;
+    }
+
+    .contact .footer{
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+
+    /* .home .left-side,
+    .home .right-side{
+        height: 50vh;
+    } */
+    .navigation{
+        
+    }
+    .home, .about, 
+    .resume .content, 
+    .portfolio .project-display,
+    .contact .contents{
+        display: flex;
+        flex-direction: column;
+    }
+    .home .left-side{
+        padding: 10vh 0vh;
+    }
+    .home .right-side .image img{
+        height: 10rem;
+        width: 20rem;
+    }
+    .home .right-side .image::before{
+        top: -3rem;
+        right: 3rem;
+    }
+    .home .right-side .image::after{
+        bottom: -4.5rem;
+        left: -1.5rem;
+    }
+    #containers
+    {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .resume .left-side .container{
+        margin: 0 auto;
+    }
+    .resume, .portfolio .projects{
+        height: fit-content;
+    }
+    .about{
+        margin-top: 10vh;
+        height: fit-content;
+    }
+    .portfolio ,.resume{
+        height: fit-content;
+    }
+    .portfolio .project-display .topics{
+        /* flex: 1 1 100%; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .portfolio .project-display .topics li{
+        flex: 1;
+        padding: 5px 0;
+        border-right: 1px solid white;
+    }
+    .portfolio .project-display,
+    .contact{
+        height: fit-content;
+    }
+    .portfolio .project-display .projects{
+        padding: 1rem 0rem;
+    }
+    .portfolio .project-display .one-proj{
+        margin: 1rem 0rem;
+    }
+    .contact .contents .footer .main-box{
+        height: 30vh;
+        margin: 1rem 0rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+/* one static must be in last */
 .containerStack:nth-child(1){
     background: #5E28A7;
 }
