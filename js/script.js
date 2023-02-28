@@ -263,3 +263,18 @@ hamMenu.addEventListener("click", ()=>{
 mainNav.addEventListener("click", ()=>{
   mainNav.classList.toggle("active");
 })
+
+function formSubmit(e){
+  e.preventDefault();
+}
+
+const emailInput = document.getElementById('email');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  emailInput.addEventListener('input', () => {
+    if (!emailRegex.test(emailInput.value)) {
+      emailInput.setCustomValidity('Please enter a valid email address');
+    } else {
+      emailInput.setCustomValidity('');
+    }
+  });

@@ -147,19 +147,21 @@
         <h3 class="txt-heading">Contact</h3>
         <div class="contents">
 
-            <form action="#" method="post" class="inputForm">
+            <form action="https://formsubmit.co/nikeshadhikari896@gmail.com" method="post" class="inputForm" onsubmit="formSubmit(this)">
 
 
                 <label for="name">Name: </label>
                 <input type="text" name="name" id="name" placeholder="enter your name">
 
                 <label for="email">Email: </label>
-                <input type="text" name="email" id="email" placeholder="enter your email">
+                <input type="text" name="email" id="email" placeholder="enter your email" required>
 
                 <label for="msg">Message: </label>
                 <textarea name="msg" id="msg" cols="30" rows="10" placeholder="enter message . . ."></textarea>
 
-                <input type="submit" value="SUBMIT" name="submit" id="submit">
+                <input type="submit" name="submit" id="submit">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/#contact">
+                <input type="hidden" name="_captcha" value="false">
             </form>
 
             <footer class="footer">
