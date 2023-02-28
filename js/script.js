@@ -252,3 +252,14 @@ function changePortfolioProject(stack, e){
   reColorProject();
   e.style.background = "#0d0245";
 }
+
+
+let hamMenu = document.querySelector("#hamMenu");
+let mainNav = document.querySelector("#mainNav");
+
+hamMenu.addEventListener("click", ()=>{
+  mainNav.classList.toggle("active");
+})
+mainNav.addEventListener("click", ()=>{
+  mainNav.classList.toggle("active");
+})
