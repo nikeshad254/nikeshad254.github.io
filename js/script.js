@@ -125,7 +125,7 @@ const ResumeProtfolio = {
         link: "http://bit.ly/3IyOcjx",
       },
       {
-        title: "Baic CRUD",
+        title: "Basic CRUD",
         desc: "accept data from user and stores in mysql data base allows to delete, read and update too",
         thumbnail: "../medias/projectImg/simpleCURD.png",
         link: "http://bit.ly/3Zj3hfQ",
