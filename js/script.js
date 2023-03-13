@@ -157,6 +157,13 @@ const ResumeProtfolio = {
 
     projects: [
       {
+        title: "Youtube 2.0",
+        desc: "youtube next version application using rapid api and course from js mastery",
+        thumbnail: "../medias/projectImg/youtubeClone.png",
+        link: "http://bit.ly/3JC0r0u",
+      },
+
+      {
         title: "News App",
         desc: "news reading app using react , has spinner, can previous next, made using api which works on development version only",
         thumbnail: "../medias/projectImg/newsMonkey.png",
