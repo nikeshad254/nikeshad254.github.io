@@ -160,7 +160,7 @@ const ResumeProtfolio = {
         title: "Youtube 2.0",
         desc: "youtube next version application using rapid api and course from js mastery",
         thumbnail: "../medias/projectImg/youtubeClone.png",
-        link: "http://bit.ly/3JC0r0u",
+        link: "https://comfy-malasada-dc096c.netlify.app/",
       },
 
       {
